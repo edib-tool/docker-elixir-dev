@@ -1,6 +1,6 @@
-# FROM edib/elixir-dev:latest
+# FROM edib/elixir-dev:1.2
 
 Elixir development image.
 
-This image is based on `edib/base-erlang:18.1` and adds the Elixir package.
+This image is based on `edib/base-erlang:18` and adds the Elixir package.
 Also uses updated Hex and Rebar (via Mix tool).
