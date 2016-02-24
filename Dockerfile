@@ -11,7 +11,6 @@ RUN apk --update add --virtual build-dependencies wget ca-certificates && \
     unzip Precompiled.zip -d /opt/elixir-${ELIXIR_VERSION}/ && \
     rm Precompiled.zip && \
     apk del build-dependencies && \
-    rm -rf /etc/ssl && \
     rm -rf /var/cache/apk/*
 
 ENV PATH $PATH:/opt/elixir-${ELIXIR_VERSION}/bin
