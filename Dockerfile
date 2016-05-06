@@ -5,7 +5,7 @@ MAINTAINER Christoph Grabo <edib@markentier.com>
 
 ENV ELIXIR_VERSION 1.2.5
 
-RUN apk --update add --virtual build-dependencies wget ca-certificates && \
+RUN apk --update add --virtual build-dependencies wget && \
     wget https://github.com/elixir-lang/elixir/releases/download/v${ELIXIR_VERSION}/Precompiled.zip && \
     mkdir -p /opt/elixir-${ELIXIR_VERSION}/ && \
     unzip Precompiled.zip -d /opt/elixir-${ELIXIR_VERSION}/ && \
