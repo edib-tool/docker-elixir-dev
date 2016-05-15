@@ -5,15 +5,13 @@ MAINTAINER Christoph Grabo <edib@markentier.com>
 
 ENV ELIXIR_VERSION 1.2.5
 
-RUN apk --update add --virtual build-dependencies && \
-    curl -sSL https://github.com/elixir-lang/elixir/releases/download/v${ELIXIR_VERSION}/Precompiled.zip \
+RUN curl -sSL https://github.com/elixir-lang/elixir/releases/download/v${ELIXIR_VERSION}/Precompiled.zip \
     -o Precompiled.zip && \
     mkdir -p /opt/elixir-${ELIXIR_VERSION}/ && \
     unzip Precompiled.zip -d /opt/elixir-${ELIXIR_VERSION}/ && \
-    rm Precompiled.zip && \
-    apk del build-dependencies && \
-    rm -rf /var/cache/apk/*
+    rm Precompiled.zip
 
 ENV PATH $PATH:/opt/elixir-${ELIXIR_VERSION}/bin
 
-RUN mix local.hex --force && mix local.rebar --force
+RUN mix local.hex --force && \
+    mix local.rebar --force
