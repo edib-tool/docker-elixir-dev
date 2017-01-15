@@ -1,4 +1,4 @@
-# FROM edib/elixir-dev:1.3
+# FROM edib/elixir-dev:1.4
 
 Elixir development image.
 
