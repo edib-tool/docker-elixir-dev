@@ -1,8 +1,6 @@
 FROM edib/base-erlang:19
 MAINTAINER Christoph Grabo <edib@markentier.com>
 
-#RUN apk --update add 'elixir<1.4.0' && rm -rf /var/cache/apk/*
-
 ARG ELIXIR_VERSION
 ENV ELIXIR_VERSION ${ELIXIR_VERSION:-1.4.0}
 
