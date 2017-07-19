@@ -2,7 +2,7 @@ FROM edib/base-erlang:19
 MAINTAINER Christoph Grabo <edib@markentier.com>
 
 ARG ELIXIR_VERSION
-ENV ELIXIR_VERSION ${ELIXIR_VERSION:-1.4.1}
+ENV ELIXIR_VERSION ${ELIXIR_VERSION:-1.4.5}
 
 RUN curl -sSL https://github.com/elixir-lang/elixir/releases/download/v${ELIXIR_VERSION}/Precompiled.zip \
     -o Precompiled.zip && \
